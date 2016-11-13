@@ -1,0 +1,76 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.JRip -F 3 -N 2.0 -O 2 -S 1 -P
+Relation:     fullvalidtrainingdatasetextendv_unibitrigram
+Instances:    286
+Attributes:   19299
+              [list of attributes omitted]
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+JRIP rules:
+===========
+
+(pharmacy >= 1) and (change >= 1) => as.vector.extvalidds...3..=homepage (3.0/0.0)
+(lens >= 1) and (main >= 1) => as.vector.extvalidds...3..=faq (7.0/0.0)
+(accessibility >= 1) and (access <= 0) => as.vector.extvalidds...3..=searchresult (10.0/4.0)
+(terms >= 1) and (feedback.find >= 1) => as.vector.extvalidds...3..=searchresult (2.0/0.0)
+(acepta >= 1) => as.vector.extvalidds...3..=captcha (19.0/6.0)
+(customer <= 0) and (sunglasses <= 0) => as.vector.extvalidds...3..=nonenglish (13.0/0.0)
+(format >= 1) and (two <= 0) and (base <= 0) => as.vector.extvalidds...3..=nonenglish (8.0/0.0)
+(foreign >= 1) and (blog >= 1) => as.vector.extvalidds...3..=nonenglish (2.0/0.0)
+(results <= 0) and (first.available >= 1) => as.vector.extvalidds...3..=product (60.0/0.0)
+(stars.stars.stars <= 0) and (facebook >= 1) and (feedback.product.description <= 0) => as.vector.extvalidds...3..=product (19.0/0.0)
+(scarves >= 1) and (available <= 0) and (account <= 0) => as.vector.extvalidds...3..=product (5.0/0.0)
+(accurate >= 1) => as.vector.extvalidds...3..=product (2.0/0.0)
+ => as.vector.extvalidds...3..=listing (136.0/4.0)
+
+Number of Rules : 13
+
+
+Time taken to build model: 6.2 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         248               86.7133 %
+Incorrectly Classified Instances        38               13.2867 %
+Kappa statistic                          0.8043
+Mean absolute error                      0.0293
+Root mean squared error                  0.1482
+Relative absolute error                 23.3084 %
+Root relative squared error             59.4671 %
+Total Number of Instances              286     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.907    0.045    0.897      0.907    0.902      0.859    0.928     0.846     product
+                 0.333    0.007    0.500      0.333    0.400      0.398    0.867     0.331     homepage
+                 0.947    0.058    0.933      0.947    0.940      0.888    0.936     0.888     listing
+                 0.714    0.007    0.714      0.714    0.714      0.707    0.854     0.517     faq
+                 0.690    0.016    0.833      0.690    0.755      0.734    0.934     0.720     nonenglish
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.288     0.003     reviews
+                 0.625    0.022    0.455      0.625    0.526      0.517    0.903     0.308     searchresult
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.291     0.003     login
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.289     0.003     aboutus
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.969     0.141     logininactive
+                 1.000    0.022    0.684      1.000    0.813      0.818    0.983     0.585     captcha
+Weighted Avg.    0.867    0.044    0.856      0.867    0.859      0.820    0.925     0.793     
+
+=== Confusion Matrix ===
+
+   a   b   c   d   e   f   g   h   i   j   k   <-- classified as
+  78   0   3   2   3   0   0   0   0   0   0 |   a = product
+   1   2   0   0   0   0   3   0   0   0   0 |   b = homepage
+   5   1 125   0   1   0   0   0   0   0   0 |   c = listing
+   1   0   0   5   0   0   1   0   0   0   0 |   d = faq
+   1   0   2   0  20   0   0   0   0   0   6 |   e = nonenglish
+   1   0   0   0   0   0   0   0   0   0   0 |   f = reviews
+   0   1   2   0   0   0   5   0   0   0   0 |   g = searchresult
+   0   0   1   0   0   0   0   0   0   0   0 |   h = login
+   0   0   1   0   0   0   0   0   0   0   0 |   i = aboutus
+   0   0   0   0   0   0   2   0   0   0   0 |   j = logininactive
+   0   0   0   0   0   0   0   0   0   0  13 |   k = captcha
+

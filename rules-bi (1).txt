@@ -1,0 +1,76 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.JRip -F 3 -N 2.0 -O 2 -S 1 -P
+Relation:     fullvalidtrainingdatasetextendv_bigram
+Instances:    286
+Attributes:   7001
+              [list of attributes omitted]
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+JRIP rules:
+===========
+
+(main.menu >= 1) and (easy.possible >= 1) => as.vector.extvalidds...3..=homepage (2.0/0.0)
+(write.review >= 1) and (account.manage <= 0) and (account.orders <= 0) => as.vector.extvalidds...3..=faq (7.0/0.0)
+(main.menu >= 1) and (health.beauty <= 0) => as.vector.extvalidds...3..=searchresult (10.0/4.0)
+(heating.cooling >= 1) and (home.decor >= 1) and (shipping.minimum <= 0) and (ad.will <= 0) => as.vector.extvalidds...3..=searchresult (2.0/0.0)
+(acepta.cookies >= 1) => as.vector.extvalidds...3..=captcha (19.0/6.0)
+(da.cor <= 0) and (ebooks.kindle >= 1) and (toutes.nos <= 0) => as.vector.extvalidds...3..=nonenglish (16.0/0.0)
+(apra.s >= 1) and (amazon.url <= 0) => as.vector.extvalidds...3..=nonenglish (4.0/0.0)
+(da.cor <= 0) and (review.first >= 1) and (amazon.bestsellers <= 0) => as.vector.extvalidds...3..=nonenglish (2.0/0.0)
+(customer.reviews >= 1) and (first.available >= 1) => as.vector.extvalidds...3..=product (61.0/0.0)
+(avg.customer <= 0) and (facebook.twitter >= 1) and (feedback.product <= 0) and (account.cart <= 0) => as.vector.extvalidds...3..=product (16.0/0.0)
+(review.stars <= 0) and (part.number >= 1) => as.vector.extvalidds...3..=product (3.0/0.0)
+(care.home >= 1) and (per.month <= 0) and (already.account <= 0) => as.vector.extvalidds...3..=product (5.0/0.0)
+ => as.vector.extvalidds...3..=listing (139.0/7.0)
+
+Number of Rules : 13
+
+
+Time taken to build model: 3.06 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         247               86.3636 %
+Incorrectly Classified Instances        39               13.6364 %
+Kappa statistic                          0.7971
+Mean absolute error                      0.0318
+Root mean squared error                  0.1497
+Relative absolute error                 25.2949 %
+Root relative squared error             60.0744 %
+Total Number of Instances              286     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.919    0.040    0.908      0.919    0.913      0.876    0.924     0.862     product
+                 0.000    0.007    0.000      0.000    0.000      -0.012   0.718     0.139     homepage
+                 0.955    0.084    0.906      0.955    0.930      0.868    0.939     0.893     listing
+                 0.857    0.004    0.857      0.857    0.857      0.854    0.920     0.738     faq
+                 0.655    0.008    0.905      0.655    0.760      0.749    0.903     0.747     nonenglish
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.281     0.003     reviews
+                 0.500    0.025    0.364      0.500    0.421      0.407    0.879     0.232     searchresult
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.284     0.003     login
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.281     0.003     aboutus
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.976     0.174     logininactive
+                 1.000    0.022    0.684      1.000    0.813      0.818    0.983     0.585     captcha
+Weighted Avg.    0.864    0.054    0.845      0.864    0.851      0.809    0.920     0.803     
+
+=== Confusion Matrix ===
+
+   a   b   c   d   e   f   g   h   i   j   k   <-- classified as
+  79   1   3   1   2   0   0   0   0   0   0 |   a = product
+   2   0   1   0   0   0   3   0   0   0   0 |   b = homepage
+   4   0 126   0   0   0   2   0   0   0   0 |   c = listing
+   0   0   1   6   0   0   0   0   0   0   0 |   d = faq
+   2   0   2   0  19   0   0   0   0   0   6 |   e = nonenglish
+   0   0   1   0   0   0   0   0   0   0   0 |   f = reviews
+   0   1   3   0   0   0   4   0   0   0   0 |   g = searchresult
+   0   0   1   0   0   0   0   0   0   0   0 |   h = login
+   0   0   1   0   0   0   0   0   0   0   0 |   i = aboutus
+   0   0   0   0   0   0   2   0   0   0   0 |   j = logininactive
+   0   0   0   0   0   0   0   0   0   0  13 |   k = captcha
+
